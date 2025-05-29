@@ -1,9 +1,10 @@
-const conn = require('./db/conn')
+require('dotenv').config()
 
 const express = require('express')
 const exphbs = require('express-handlebars')
 const session = require('express-session')
 const fileStore = require('session-file-store')(session)
+const conn = require('./db/conn')
 
 const jcontroller = require('./controllers/JokesController')
 const jokes = require('./routes/JokesRoutes')
@@ -52,7 +53,7 @@ conn.connect((erro) => {
         console.log(erro)
     }
 
-    app.listen(3000)
+    app.listen(process.env.PORT)
 
     console.log('banco conectado')
     console.log('servidor rodando')
