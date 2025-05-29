@@ -48,13 +48,4 @@ app.get('/', jcontroller.exibir)
 app.use('/jokes', jokes)
 app.use('/', auth)
 
-conn.connect((erro) => {
-    if(erro){
-        console.log(erro)
-    }
-
-    app.listen(process.env.PORT)
-
-    console.log('banco conectado')
-    console.log('servidor rodando')
-})
+app.listen(process.env.PORT)
