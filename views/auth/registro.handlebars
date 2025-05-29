@@ -1,0 +1,42 @@
+<div class="auth-container">
+    <div class="cabecalho-registro-container">
+        <h2>Registro</h2>
+
+        {{#if verificacaoInvalida}}
+            <p class="erro">{{mensagem}}</p>
+
+        {{else}}
+            {{#if sucesso}}
+                <p class="sucesso">{{mensagem}}</p>
+            {{/if}}
+        
+        {{/if}}
+    </div>
+
+    <form action="/registrar" method="post">
+        <div class="form-info">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" >
+        </div>
+
+        <div class="form-info">
+            <label for="email">Email:</label>
+            <input type="email" name="email" >
+        </div>
+
+        <div class="form-info">
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" >
+        </div>
+
+        <div class="form-info">
+            <label for="confirmaSenha">Corfirme a senha:</label>
+            <input type="password" name="confirmaSenha" >
+        </div>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <p class="rodape">Já tem conta? <a href="/login">Clique Aqui!</a></p>
+
+</div>

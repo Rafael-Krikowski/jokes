@@ -1,0 +1,16 @@
+<div class="auth-container">
+    <div>
+        <h2 class="titulo-criacao">Edite sua joke</h2>
+    </div>
+
+
+    <form action="/jokes/atualizar/{{data.id}}" method="post">
+        <textarea class="campo-piada" type="text" name="campoPiada" placeholder="Digite aqui..." >{{data.titulo}}</textarea>
+
+        <div>
+            <a href="/jokes/dashboard" class="btn"> Voltar</a>
+            <button class="btn" type="submit"> Salvar </button>
+        </div>
+    </form>
+    {{!-- <a href="/jokes/dashboard"><button class="btn">Voltar</button></a> --}}
+</div>

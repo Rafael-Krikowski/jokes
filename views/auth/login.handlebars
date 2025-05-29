@@ -1,0 +1,32 @@
+<div class="auth-container">
+    <div class="cabecalho-login">
+        <h2>Login</h2>
+
+        {{#if infoInvalida}}
+            <p class="erro">{{mensagem}}</p>
+
+        {{else}}
+            {{#if sucesso}}
+                <p class="sucesso">{{mensagem}}</p>
+            {{/if}}
+        
+        {{/if}}
+    </div>
+
+    <form action="/login" method="post">
+        <div class="form-info">
+            <label for="email">Email:</label>
+            <input type="email" name="email" >
+        </div>
+
+        <div class="form-info">
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" >
+        </div>
+
+        <input type="submit" value="Entrar">
+    </form>
+
+    <p class="rodape">Não tem uma conta? <a href="/registrar">Clique Aqui!</a></p>
+
+</div>

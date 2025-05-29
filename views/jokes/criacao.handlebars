@@ -1,0 +1,23 @@
+<div class="auth-container">
+    <div>
+        <h2 class="titulo-criacao">Conte sua piada</h2>
+
+        {{#if verificado}}
+            <p class="sucess-inserir" style="color: #ff3535;">{{mensagem}}</p>
+
+        {{else}}
+            <p class="sucess-inserir">{{mensagem}}</p>
+        {{/if}}
+    </div>
+
+
+    <form action="/jokes/inserir" method="post">
+        <textarea class="campo-piada" type="text" name="campoPiada" placeholder="Digite aqui..."></textarea>
+
+        <div>
+            <a href="/jokes/dashboard" class="btn"> Voltar</a>
+            <button class="btn" type="submit"> Enviar </button>
+        </div>
+    </form>
+    {{!-- <a href="/jokes/dashboard"><button class="btn">Voltar</button></a> --}}
+</div>

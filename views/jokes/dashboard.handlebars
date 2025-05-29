@@ -1,0 +1,23 @@
+<div class="auth-container">
+    <h2 class="titulo-dashboard">Dashboard</h2>
+
+    <div class="btn-dashboard-container">
+        <a href="" class="btn">Voltar</a>
+        <a class="btn" href="/jokes/criar">Criar Joke</a>
+    </div>
+
+
+    {{#each data}}
+        <div class="jokes-container">
+            <p>{{this.titulo}}</p>
+
+            <div>
+                <a class="btn-joke" href="/jokes/editar/{{this.id}}">Editar</a>
+
+                <form action="/jokes/deletar/{{this.id}}" method="post">
+                    <button type="submit" class="btn-joke">Excluir</button>
+                </form>
+            </div>
+        </div>
+    {{/each}}
+</div>
